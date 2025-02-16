@@ -101,8 +101,8 @@ def get_free_time(events):
 
     return free_slots
 
+# Schedules a study session in Google Calendar with assigned color ID.
 def add_event(service, start_time, end_time, subject, color_id):
-    """Schedules a study session in Google Calendar with assigned color ID."""
     event = {
         "summary": subject,
         "colorId": str(color_id),  
