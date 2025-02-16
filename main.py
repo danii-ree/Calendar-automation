@@ -15,7 +15,7 @@ from googleapiclient.errors import HttpError
 ###########################################################################################
 
 SCOPES = ["https://www.googleapis.com/auth/calendar"]
-SESSION_DURATION = datetime.timedelta(minutes=90)  # Standard session duration
+SESSION_DURATION = datetime.timedelta(minutes=90) 
 DATA_MANAGEMENT_DURATION = datetime.timedelta(minutes=60) 
 TIMEZONE = "America/Toronto"
 
@@ -150,7 +150,7 @@ def schedule_study_sessions(service):
 
                     if start_time + DATA_MANAGEMENT_DURATION <= end_time:
                         session_end = start_time + DATA_MANAGEMENT_DURATION
-                        subject, color_id = SUBJECTS[3]  # Data Management
+                        subject, color_id = SUBJECTS[3]   
                         add_event(service, start_time, session_end, subject, color_id)
                 else:  
                     physics_start = start_time.replace(hour=16, minute=45)
